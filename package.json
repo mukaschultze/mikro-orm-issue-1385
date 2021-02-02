@@ -1,0 +1,29 @@
+{
+  "name": "mikro-orm-custom-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rm -rf migrations && mikro-orm migration:create --initial"
+  },
+  "author": "",
+  "license": "ISC",
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^4.4.1",
+    "@mikro-orm/migrations": "^4.4.1",
+    "@mikro-orm/mysql": "^4.4.1",
+    "@mikro-orm/reflection": "^4.4.1"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
